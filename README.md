@@ -1,6 +1,6 @@
 # 🎙️ Discord Clone
 
-A real-time chat, community, and voice/video platform built as a graduation project — inspired by Discord, built from the ground up.
+A real-time chat, community, and voice/video platform  — inspired by Discord, built from the ground up.
 
 ---
 
@@ -45,4 +45,3 @@ This is a well-understood, **intentional scope boundary** for v1 — not a bug. 
 
 ---
 
-<p align="center">Made with ❤️ as a graduation project</p>
