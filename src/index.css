@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/*
+  Discord-like dark theme tokens, defined via Tailwind v4's CSS-first
+  @theme config (no tailwind.config.js needed). Referenced as bg-app,
+  bg-surface, text-primary, etc.
+*/
+@theme {
+  --color-app: #313338;
+  --color-surface: #2b2d31;
+  --color-surface-deep: #1e1f22;
+  --color-surface-raised: #383a40;
+  --color-border: #1e1f22;
+  --color-text-primary: #f2f3f5;
+  --color-text-muted: #949ba4;
+  --color-text-faint: #6d6f78;
+  --color-accent: #5865f2;
+  --color-accent-hover: #4752c4;
+  --color-online: #23a55a;
+  --color-offline: #80848e;
+  --color-danger: #f23f42;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  @apply bg-app text-text-primary antialiased;
+}
+
+/* Thin dark scrollbars everywhere, instead of the default light OS chrome
+   clashing with the dark theme. */
+* {
+  scrollbar-color: var(--color-surface-raised) transparent;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-surface-raised);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-faint);
+  background-clip: content-box;
+}
